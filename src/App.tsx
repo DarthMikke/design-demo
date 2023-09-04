@@ -7,6 +7,9 @@ import Pane from './components/Pane';
 import List from './components/List';
 import ListItem from './components/ListItem';
 
+import './components/styles/Panes.scss'
+import './components/styles/Pane.scss'
+
 function App() {
   const router = createBrowserRouter([
     {

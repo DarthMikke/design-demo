@@ -1,0 +1,12 @@
+
+.pane {
+  padding: 16px;
+  //width: ;
+  flex-basis: max-content;
+  border-right: 1px solid gray;
+
+  &:last-child {
+    flex-grow: 1;
+    border-right: none;
+  }
+}
