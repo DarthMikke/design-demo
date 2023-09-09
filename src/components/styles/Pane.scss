@@ -5,6 +5,8 @@
   flex-basis: max-content;
   border-right: 1px solid gray;
 
+  height: 100%;
+
   &:last-child {
     flex-grow: 1;
     border-right: none;

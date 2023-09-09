@@ -1,4 +1,3 @@
-import './App.css'
 import { createBrowserRouter, RouterProvider, Link, useOutlet } from 'react-router-dom'
 import LoadingView from './routes/loading/View'
 import CounterView from './routes/counter/View'
@@ -7,8 +6,10 @@ import Pane from './components/Pane';
 import List from './components/List';
 import ListItem from './components/ListItem';
 
+import './components/styles/0_base.scss'
 import './components/styles/Panes.scss'
 import './components/styles/Pane.scss'
+import './components/styles/SideMenu.scss'
 
 function App() {
   const router = createBrowserRouter([
