@@ -6,7 +6,8 @@ import Pane from './components/Pane';
 import List from './components/List';
 import ListItem from './components/ListItem';
 
-import './components/styles/0_base.scss'
+import './components/styles/0_colors.scss'
+import './components/styles/1_base.scss'
 import './components/styles/Panes.scss'
 import './components/styles/Pane.scss'
 import './components/styles/SideMenu.scss'
