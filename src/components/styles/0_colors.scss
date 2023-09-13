@@ -1,9 +1,10 @@
 
 :root {
   --body-bg-color-1: #242424;
-  --body-bg-color-2: #484848;
+  --body-bg-color-2: #242424;
+  --body-bg-color-3: #484848;
 
-
+  /** Don't edit below fields */
 
   --body-fg-color: rgba(255, 255, 255, 0.87);
   --body-bg-color: var(--body-bg-color-1);
@@ -15,6 +16,8 @@
 @media (prefers-color-scheme: light) {
   :root {
     --body-bg-color-1: #ffffff;
+    --body-bg-color-2: #f9fbfc;
+    --body-bg-color-3: #e9f2f9;
     --body-fg-color: #213547;
 
     --link-hover-color: #747bff;

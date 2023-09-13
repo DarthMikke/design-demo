@@ -1,4 +1,6 @@
 .side-menu {
+  background-color: var(--body-bg-color-2);
+  
   ul {
     list-style: none;
     display: flex;
@@ -15,7 +17,7 @@
       transition: background-color 0.3s ease-out;
       
       &:hover {
-        background-color: var(--body-bg-color-2);
+        background-color: var(--body-bg-color-3);
 
         &, & > * {
           color: var(--body-fg-color);
