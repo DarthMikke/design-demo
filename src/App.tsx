@@ -41,7 +41,7 @@ function MainView() {
   const outlet = useOutlet();
 
   return <PaneView>
-    <Pane className={ "side-menu" }>
+    <Pane className={ ("side-menu " + (outlet ? " hidden" : "")) }>
       <List>
         <ListItem><Link to='/'>Forside</Link></ListItem>
         <ListItem><Link to='/loading'>Plasshaldarside</Link></ListItem>
