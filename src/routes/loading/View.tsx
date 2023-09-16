@@ -1,3 +1,5 @@
+import Pane from "../../components/Pane";
+
 export default function () {
-  return <p>Lastar inn...</p>;
+  return <Pane><p>Lastar inn...</p></Pane>;
 }
