@@ -1,6 +1,20 @@
 .side-menu {
-  background-color: var(--body-bg-color-2);
+  box-sizing: border-box;
+
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    left: 0;
+    transition: left 0.3s ease-out;
+    width: 100vw;
   
+    &.hidden {
+      left: -100vw;
+    }
+    
+  }
+
+  background-color: var(--body-bg-color-2);
+
   ul {
     list-style: none;
     display: flex;
