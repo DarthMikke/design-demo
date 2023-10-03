@@ -1,0 +1,27 @@
+%button_inner {
+  padding: 10px 8px;
+  
+  font-size: 12px;
+}
+
+%button_outer {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+}
+
+@mixin buttonMixin($type) {
+  &.#{$type} {
+    border-color: var(--#{$type}-button-border-color);
+    background-color: var(--#{$type}-button-background-color);
+    color: var(--#{$type}-button-color);
+
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      border-color: var(--#{$type}-button-border-color-hover);
+      background-color: var(--#{$type}-button-background-color-hover);
+      color: var(--#{$type}-button-color-hover);
+    }
+  }
+}
