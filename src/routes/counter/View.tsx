@@ -11,9 +11,9 @@ export default function() {
     <button className={"button primary"} onClick={() => {setCounter(counter + 1)}}>Increase by 1</button>
     <button className={"button destructive"} onClick={() => {setCounter(counter - 1)}}>Decrease by 1</button>
     <Dropdown type={"secondary"} title={"Other options"}>
-      <button onClick={() => {setCounter(5)}}>Reset</button>
-      <button onClick={() => {setCounter(counter + 10)}}>Increase by 10</button>
-      <button onClick={() => {setCounter(counter - 10)}}>Decrease by 10</button>
+      <button className={"button destructive"} onClick={() => {setCounter(5)}}>Reset</button>
+      <button className={"button secondary"} onClick={() => {setCounter(counter + 10)}}>Increase by 10</button>
+      <button className={"button secondary"} onClick={() => {setCounter(counter - 10)}}>Decrease by 10</button>
     </Dropdown>
   </Pane>
 }
