@@ -1,28 +1,11 @@
-
-
-@mixin buttonMixin($type) {
-  &.#{$type} {
-    border-color: var(--#{$type}-button-border-color);
-    background-color: var(--#{$type}-button-background-color);
-    color: var(--#{$type}-button-color);
-
-    transition: all 0.3s ease-out;
-
-    &:hover {
-      border-color: var(--#{$type}-button-border-color-hover);
-      background-color: var(--#{$type}-button-background-color-hover);
-      color: var(--#{$type}-button-color-hover);
-    }
-  }
-}
-
+@import 'extends';
 
 .button {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 6px;
-  font-size: 12px;
-  padding: 8px 10px;
+  @extend %button_inner;
+  @extend %button_outer;
+
+  display: inline;
+  margin: 2px;
 
   @include buttonMixin("primary");
   @include buttonMixin("secondary");
