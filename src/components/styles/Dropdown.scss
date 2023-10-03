@@ -1,0 +1,53 @@
+@import 'extends';
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  padding: 0;
+
+  button {
+    @extend %button_inner;
+
+    margin: 0;
+    appearance: none;
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+  }
+
+  &__list {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+
+    // button:hover &,
+    button:active &,
+    button:focus-within &,
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    position: absolute;
+    list-style: none;
+
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+    right: 0;
+    top: 40px;
+
+    @extend %button_outer;
+    border: 1px solid black;
+    overflow: clip;
+  }
+
+  &__item {
+    display: block;
+
+    button.button {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}

@@ -12,6 +12,7 @@ import './components/styles/Panes.scss'
 import './components/styles/Pane.scss'
 import './components/styles/SideMenu.scss'
 import './components/styles/Button.scss'
+import "./components/styles/Dropdown.scss"
 
 function App() {
   const router = createBrowserRouter([
