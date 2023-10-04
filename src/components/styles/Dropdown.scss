@@ -40,15 +40,23 @@
       top: -2px;
     }
   }
+
+  &.primary &__list {
+    border-color: var(--primary-button-border-color);
+  }
+  &.secondary &__list {
+    border-color: var(--secondary-button-border-color);
+  }
+  &.destructive &__list {
+    border-color: var(--destructive-button-border-color);
+  }
+
   &__list {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease-out;
 
-    // button:hover &,
-    button:active &,
-    button:focus-within &,
-    &.open {
+    button.open & {
       opacity: 1;
       pointer-events: all;
     }
@@ -59,15 +67,19 @@
     margin-inline: 0;
     padding-inline: 0;
     right: 0;
-    top: 40px;
+    top: 28px;
+
+    width: max-content;
 
     @extend %button_outer;
-    border: 1px solid black;
+    border-width: 1px;
+    border-style: solid;
     overflow: clip;
   }
 
   &__item {
     display: block;
+    min-width: max-content;
 
     button.button {
       border-radius: 0;
