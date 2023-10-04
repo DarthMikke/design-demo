@@ -10,8 +10,8 @@ function Dropdown ({title, children, type, onClick}: {
 
   return <div className={`button dropdown ${type ?? ""}`}>
     { title && <button onClick={onClick}>{ title }</button> }
-    <button onClick={() => { setOpen(!isOpen) } }>...
-    { <ul className={`dropdown__list ${isOpen ? "open" : ""}`}>{ React.Children.toArray(children).map((x) => <li className="dropdown__item">{x}</li>) }</ul> }
+    <button className={`menu-toggle ${isOpen ? "open" : ""}`} onClick={() => { setOpen(!isOpen) } } aria-label={ "open submenu" }>
+    { <ul className={`dropdown__list`}>{ React.Children.toArray(children).map((x) => <li className="dropdown__item">{x}</li>) }</ul> }
     </button>
   </div>
 }
