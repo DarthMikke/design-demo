@@ -1,53 +1,38 @@
 @import 'extends';
 
 .dropdown {
-  display: inline-block;
-  position: relative;
-
-  padding: 0;
-
-  button {
-    @extend %button_inner;
-
-    margin: 0;
-    appearance: none;
-    background-color: transparent;
-    color: inherit;
-    border: 0;
-  }
-
-  button.menu-toggle {
+  &-toggle {
     position: relative;
 
-    &::before {
+    &::after {
       content: "";
       opacity: 1;
-      position: absolute;
-      right: 8px;
-      top: 3px;
+      position: relative;
+      margin-left: 8px;
+      top: 2px;
 
       border: 5px solid transparent;
 
-      border-top-color: black;
+      border-top-color: var(--color, #000);
 
-      display: block;
+      display: inline-block;
       width: 0px;
       height: 0px;
     }
 
-    &.open::before {
+    &.open::after {
       transform: rotate(180deg);
       top: -2px;
     }
   }
 
-  &.primary &__list {
+  .primary &__list {
     border-color: var(--primary-button-border-color);
   }
-  &.secondary &__list {
+  .secondary &__list {
     border-color: var(--secondary-button-border-color);
   }
-  &.destructive &__list {
+  .destructive &__list {
     border-color: var(--destructive-button-border-color);
   }
 
@@ -65,9 +50,10 @@
 
     margin-block: 0;
     margin-inline: 0;
+    padding-block: 0;
     padding-inline: 0;
     right: 0;
-    top: 28px;
+    top: 38px;
 
     width: max-content;
 
@@ -75,6 +61,10 @@
     border-width: 1px;
     border-style: solid;
     overflow: clip;
+
+    button {
+      margin: 0;
+    }
   }
 
   &__item {
@@ -84,6 +74,7 @@
     button.button {
       border-radius: 0;
       width: 100%;
+      border: 0;
     }
   }
 }
