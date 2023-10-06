@@ -1,10 +1,9 @@
-import React, { MouseEventHandler, ReactNode, useState } from "react"
+import React, { ReactNode, useState } from "react"
 
-function Dropdown ({title, children, type, onClick}: {
+function Dropdown ({title, children, type, }: {
   title: string | undefined,
   children?: ReactNode,
   type?: string,
-  onClick?: MouseEventHandler<HTMLButtonElement>
 }) {
   const [isOpen, setOpen] = useState<Boolean>(false);
 
