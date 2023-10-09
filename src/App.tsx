@@ -5,6 +5,7 @@ import PaneView from './components/PaneView';
 import Pane from './components/Pane';
 import List from './components/List';
 import ListItem from './components/ListItem';
+import About from './routes/about/View';
 
 import './components/styles/0_colors.scss'
 import './components/styles/1_base.scss'
@@ -54,7 +55,7 @@ function MainView() {
         <ListItem>Logg ut</ListItem>
       </List>
     </Pane>
-    {outlet ? outlet : <Pane><p>Vel ein ting i menyen.</p></Pane>}
+    {outlet ? outlet : <About />}
   </PaneView>
 }
 
